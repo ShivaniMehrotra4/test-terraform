@@ -36,31 +36,31 @@ resource "aws_instance" "instance" {
 
 #------------------------------------------------------------------------------
 
-data "aws_ami" "ubuntu-ami" {
-  most_recent = true
-  owners = ["838487617183"]
-  // filter {
-  //   name   = "name"
-  //   values = ["ami-051d99278ba9fdc66"]
-  // }
+# data "aws_ami" "ubuntu-ami" {
+#   most_recent = true
+#   owners = ["838487617183"]
+#   // filter {
+#   //   name   = "name"
+#   //   values = ["ami-051d99278ba9fdc66"]
+#   // }
 
-  // filter {
-  //   name   = "virtualization-type"
-  //   values = ["hvm"]
-  // }
+#   // filter {
+#   //   name   = "virtualization-type"
+#   //   values = ["hvm"]
+#   // }
 
   
-}
+# }
 
 
-resource "aws_instance" "instance-1" {
-  // ami                         = "ami-051d99278ba9fdc66"
-  instance_type               = "t2.micro"
-  associate_public_ip_address = true
-  ami                         = data.aws_ami.ubuntu-ami.id
-  key_name                    = "key-test"
+# resource "aws_instance" "instance-1" {
+#   // ami                         = "ami-051d99278ba9fdc66"
+#   instance_type               = "t2.micro"
+#   associate_public_ip_address = true
+#   ami                         = data.aws_ami.ubuntu-ami.id
+#   key_name                    = "key-test"
 
-  tags = {
-    Name = "Playground-2"
-  }
-}
+#   tags = {
+#     Name = "Playground-2"
+#   }
+# }
